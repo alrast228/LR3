@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лр3</title>
+</head>
+<body>
+    <h1>Лабораторная работа №3</h1>
+    <h2>1. Напишите программу, которая выводит числа от 1 до 10 в консоль с помощью цикла for.</h2>
+    <button onclick="VivodChisel()">Вывести числа от 1 до 10</button>
+    <script>
+        function VivodChisel() {
+        let i = 0; // мы уже имеем объявленную i с присвоенным значением
+        for (; i < 10; i++) { // нет необходимости в "начале"
+        alert( i ); // 0, 1, 2
+        } }
+    </script>
+    <h2>2. Создайте функцию, которая принимает два числа и возвращает их сумму.</h2>
+    <button onclick="SummaChisel()">Сумма чисел</button>
+    <script>
+        function SummaChisel() {
+            let a = +prompt("Введите первое число", "");
+            let b = +prompt("Введите второе число", "");
+            alert( a + b );
+        }
+    </script>
+    <h2>3. Напишите скрипт, который изменяет текст заголовка на странице при её загрузке.</h2>
+    <button onclick="Zagolovok()">Изменить текст заголовка</button>
+    <script>
+        function Zagolovok() {
+            document.title = "AAAAA"
+        }
+    </script>
+    <h2>4. Реализуйте функцию, которая добавляет элемент в конец списка на странице.</h2>
+    <ul id="item">
+    <li>ляляля</p>
+    </ul>
+    <button onclick="ElementVKonec()">Элемент в конец списка</button>
+    <script>
+        function ElementVKonec() {
+            const ul = document.getElementById('item');
+            const li = document.createElement('li');
+            li.textContent = 'лалала';
+            ul.appendChild(li);
+        }
+    </script>
+    <h2>5. Создайте массив с пятью элементами и выведите каждый элемент на страницу через цикл for.</h2>
+    <button onclick="Massiv()">Вывести элементы массива</button>
+    <script>
+        function Massiv() {
+        const array = ['1', '2', '3', '4', '5'];
+        array.forEach(item => {document.write(item + '<br>');
+        });
+        }
+    </script>
+    <h2>6. Используя if-else, создайте проверку на введённое число и выведите сообщение, является ли оно чётным.</h2>
+    <button onclick="ProverkaChetnoe()">Проверить чётность</button>
+    <script>
+        function ProverkaChetnoe() {
+            let number = +prompt("Введите число", "");
+            if (number % 2 === 0) {
+                alert("Число чётное");
+            } else {
+                alert("Число нечётное");
+            }
+        }
+    </script>
+    
+    <h2>7. Напишите программу, которая изменяет цвет фона веб-страницы при нажатии на кнопку.</h2>
+    <button onclick="IzmenitFonk()">Изменить цвет фона</button>
+    <script>
+        function IzmenitFonk() {
+            document.body.style.backgroundColor = "lightblue";
+        }
+    </script>
+    
+    <h2>8. Реализуйте добавление нового элемента в таблицу при нажатии на кнопку.</h2>
+    <table id="myTable">
+        <tr>
+            <th>Элемент</th>
+        </tr>
+    </table>
+    <button onclick="DobavitElement()">Добавить элемент в таблицу</button>
+    <script>
+        function DobavitElement() {
+            const table = document.getElementById('myTable');
+            const row = table.insertRow();
+            const cell = row.insertCell(0);
+            cell.textContent = 'Новый элемент';
+        }
+    </script>
+    
+    <h2>9. Напишите программу, которая изменяет шрифт заголовка на странице при наведении на него.</h2>
+    <h3 onmouseover="IzmenitShrift()">Изменить шрифт при наведении</h1>
+    <script>
+        function IzmenitShrift() {
+            document.querySelector('h3').style.fontFamily = "Georgia";
+        }
+    </script>
+    
+    <h2>10. Создайте кнопку, которая скрывает или показывает элемент на странице при нажатии на неё.</h2>
+    <div id="toggleElement">Этот элемент можно скрыть или показать.</div>
+    <button onclick="SkrytPokazat()">Скрыть/Показать элемент</button>
+    <script>
+        function SkrytPokazat() {
+            const element = document.getElementById('toggleElement');
+            if (element.style.display === "none") {
+                element.style.display = "block";
+            } else {
+                element.style.display = "none";
+            }
+        }
+    </script>
+    <h2>11. Создайте программу, которая увеличивает или уменьшает размер изображения на странице при клике на него.</h2>
+    <img id="myImage" src="img/aaa.jpg" style="width: 200px; cursor: pointer;" onclick="IzmenitRazmer()">
+    <script>
+        function IzmenitRazmer() {
+            const img = document.getElementById('myImage');
+            if (img.style.width === "200px") {
+                img.style.width = "400px";
+            } else {
+                img.style.width = "200px";
+            }
+        }
+    </script>
+</body>
+</body>
+</html>
